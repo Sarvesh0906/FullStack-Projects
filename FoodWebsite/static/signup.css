@@ -1,0 +1,24 @@
+:root {
+    /* Colors */
+    --bg-color: #f1f1f1;
+    --container-bg: white;
+    --text-color: #333;
+    /* Spacing and Sizing */
+    --margin-top: 20px;
+    --login-width: 35%;
+    --login-padding: 25px;
+}
+
+body {
+    margin-top: var(--margin-top);
+    display: flex;
+    background: var(--bg-color);
+    justify-content: center;
+}
+
+.login {
+    width: var(--login-width);
+    background: var(--container-bg);
+    padding: var(--login-padding);
+    /* Other styles specific to .login */
+}

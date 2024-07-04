@@ -1,0 +1,40 @@
+/* CSS Variables */
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --color-bg-light: #f1f1f1;
+    --color-bg-white: #ffffff;
+    --color-accent: rgba(0, 0, 255, 0.683);
+    --login-width: 35%;
+    --padding-default: 25px;
+    --height-full: 100vh;
+}
+
+body {
+    display: flex;
+    background: var(--color-bg-light);
+    justify-content: center;
+    align-items: center;
+    height: var(--height-full);
+    font-family: var(--font-primary);
+}
+
+.login {
+    width: var(--login-width);
+    background: var(--color-bg-white);
+    padding: var(--padding-default);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form .form-outline input:focus ~ label,
+.form .form-outline input:valid ~ label {
+    transform: translateY(-23px);
+    color: var(--color-accent);
+    transition: transform 0.3s, color 0.3s;
+}

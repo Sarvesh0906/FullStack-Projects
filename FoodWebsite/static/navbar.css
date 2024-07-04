@@ -1,0 +1,70 @@
+/* CSS Variables */
+:root {
+    --font-primary: 'Baloo Bhai 2', cursive;
+    --color-primary: #ffffff;
+    --color-secondary: hsl(17, 100%, 44%);
+    --navbar-height: 60px;
+    --font-size-navbar: 2rem;
+    --padding-navbar-logo: 10px 34px;
+    --margin-navbar-logo-img: 3px 6px;
+    --height-navbar-logo-img: 55px;
+    --border-radius-link: 20px;
+    --transition-speed: 0.3s;
+    --p-1: 4px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: var(--color-secondary);
+    height: var(--navbar-height);
+    transition: background-color var(--transition-speed);
+    /* padding: var(--p-1); */
+}
+
+/* Navigation bar: logo and Image */
+#logo {
+    margin: var(--padding-navbar-logo);
+}
+
+#logo img {
+    height: var(--height-navbar-logo-img);
+    margin: var(--margin-navbar-logo-img);
+}
+
+/* Navigation bar: List Stylist */
+#navbar ul {
+    display: flex;
+    font-family: var(--font-primary);
+}
+
+#navbar::before {
+    content: "";
+    background-color: var(--color-secondary);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: var(--font-size-navbar);
+}
+
+#navbar ul li a {
+    color: var(--color-primary);
+    display: block;
+    border-radius: var(--border-radius-link);
+    text-decoration: none;
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+#navbar ul li a:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}

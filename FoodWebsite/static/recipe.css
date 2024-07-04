@@ -1,0 +1,446 @@
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+:root {
+    --font-primary: 'Verdana', 'Geneva', Tahoma, sans-serif;
+    --color-bg-light: hsl(15, 80%, 96%);
+    --color-bg-white: #ffffff;
+    --color-primary: hsl(17, 100%, 44%);
+    --color-secondary: #4a4a4a;
+    --color-accent: red;
+    --color-accent-hover: hsl(207, 24%, 7%);
+    --color-accent-light: #f44336;
+    --font-size-base: 10px;
+    --font-size-large: 24px;
+    --font-size-medium: 20px;
+    --font-size-small: 18px;
+    --font-size-xsmall: 16px;
+    --border-radius: 8px;
+    --transition-speed: 0.5s;
+    --padding-box: 40px;
+    --padding-input: 10px;
+    --padding-btn: 10px;
+    --padding-section: 50px 100px;
+    --margin-content: 10px;
+    --margin-box: 20px 0;
+    --margin-container-top: 20px;
+    --margin-form: 30px;
+    --width-full: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button {
+    border: none;
+    font: inherit;
+}
+
+input {
+    width: var(--width-full);
+}
+
+button {
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+address {
+    font-style: normal;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-light);
+}
+
+::placeholder {
+    color: inherit;
+}
+
+.recipes {
+    margin-top: var(--margin-container-top);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    width: 35%;
+    background: var(--color-bg-white);
+    padding: 25px;
+}
+
+/* HEADER */
+header {
+    background-color: var(--color-primary);
+}
+
+#navbar {
+    justify-content: space-between;
+    width: 97%;
+}
+
+#navbar .container {
+    display: inline-flex;
+}
+
+#navbar .container ul .item {
+    display: flex;
+    align-items: center;
+}
+
+header nav form {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li a {
+    font-weight: 500;
+    padding: 5px 22px;
+}
+
+.search input[type="text"] {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.search input[type="text"],
+button[type="submit"] {
+    border: none;
+    font-size: var(--font-size-small);
+    padding: var(--padding-input);
+    border-radius: var(--border-radius);
+}
+
+.search button[type="submit"] {
+    background-color: var(--color-accent);
+    color: var(--color-bg-white);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search button[type="submit"]:hover,
+.recipe button:hover,
+.recipe-close-btn:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg-white);
+}
+
+/* MAIN SECTION */
+main {
+    margin-bottom: 25px;
+}
+
+.recipe-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    place-items: center;
+    font-size: var(--font-size-medium);
+}
+
+.recipe {
+    background-color: var(--color-bg-white);
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform var(--transition-speed) ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.03);
+}
+
+.recipe img {
+    height: 300px;
+}
+
+.recipe h3 {
+    font-size: var(--font-size-large);
+    margin-block: 5px;
+}
+
+.recipe p {
+    font-size: var(--font-size-medium);
+    color: var(--color-secondary);
+    margin: 5px 0;
+}
+
+.recipe span {
+    font-weight: 600;
+}
+
+.recipe button {
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    padding: var(--padding-btn);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-accent-light);
+    color: var(--color-bg-white);
+    border: none;
+    margin: 18px auto;
+}
+
+/* RECIPE DETAILS */
+.recipe-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #694c2f;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: var(--font-size-medium);
+    transition: all var(--transition-speed) ease-in-out;
+    overflow-y: scroll;
+}
+
+.recipe-details-content {
+    padding: 30px;
+}
+
+.recipeName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.ingredientList li {
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.recipeInstructions p {
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+.recipeName,
+.ingredientList,
+.recipeInstructions {
+    margin-bottom: 20px;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--color-accent-light);
+    cursor: pointer;
+    color: var(--color-bg-white);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADDING SCROLLBAR TO RECIPE DETAILS POPUP */
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;
+    border-radius: 16px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
+
+/* RECIPE FORM */
+.form {
+    width: 40%;
+    padding: var(--padding-box);
+    background: var(--color-bg-white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form p {
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+    margin-bottom: var(--margin-content);
+}
+
+.form h2 {
+    font-size: 30px;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.form .inputBox {
+    position: relative;
+    margin-top: var(--margin-form);
+    width: var(--width-full);
+}
+
+.form .inputBox input,
+.form .inputBox textarea {
+    width: var(--width-full);
+    padding: 5px 0;
+    padding-top: 10px;
+    font-size: var(--font-size-xsmall);
+    background: var(--color-bg-light);
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    font-weight: 500;
+}
+
+.form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding-top: 8px;
+    padding-left: 8px;
+    pointer-events: none;
+    transition: var(--transition-speed);
+    color: #333;
+    transform: translateY(-35px);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.form .inputBox input:focus ~ span,
+.form .inputBox input:valid ~ span {
+    transform: translate(-8px, -63px);
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form .inputBox textarea:focus ~ span,
+.form .inputBox textarea:valid ~ span {
+    transform: translate(-8px, -85px);
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form .inputBox .form-btn input[type="submit"] {
+    width: 100px;
+    background: var(--color-accent);
+    color: var(--color-bg-white);
+    padding: var(--padding-btn);
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background-color: black;
+    color: var(--color-bg-white);
+}
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: hsla(207, 24%, 7%, 0.5);
+    color: var(--color-bg-white);
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 250ms ease;
+    z-index: 3;
+}
+
+.back-top-btn.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.back-top-btn:is(:hover, :focus-visible) {
+    background-color: black;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}

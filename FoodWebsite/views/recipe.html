@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Recipe Page</title>
+    <meta name="description" content="Recipe Page">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/svg+xml">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/recipe.css">
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="../static/home.css">
+
+</head>
+
+<body id="top">
+
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <div class="container">
+                <div id="logo">
+                    <img src="../img/logo.png" alt="MyFoodWebsite">
+                </div>
+                <ul>
+                    <li class="item"><a href="/home">Home</a></li>
+                    <li class="item"><a href="#menu">Menu</a></li>
+                    <li class="item"><a href="#reservation">Reservation</a></li>
+                    <li class="item"><a href="/recipe">Recipes</a></li>
+                    <li class="item"><a href="/contact">Contact Us</a></li>
+                    <li class="item"><a href="/login">Login</a></li>
+                </ul>
+            </div>
+
+            <form action="/" class="search">
+                <input type="text" placeholder="Search for a Recipe" class="searchBox">
+
+                <button type="submit" class="searchBtn">Search</button>
+            </form>
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main>
+        <section class="recipes">
+            <div class="recipe-container">
+                <h2>Search Your Favourite Recipes</h2>
+                <!--   form here -->
+            </div>
+            <div class="form">
+                <p class="text-center">or:</p>
+                <form action="/addRecipes" method="post">
+                    <h2>Upload Your Recipes</h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required="required" autocomplete="off">
+                        <span>Recipe Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" name="ingrediants"></textarea>
+                        <span>Ingrediants</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" name="instructions"></textarea>
+                        <span>Instructions</span>
+                    </div>
+                    <div class="inputBox btn">
+                        <button type="submit" class="form-btn" aria-label="Subscribe">
+                            <input type="submit" name="submit" value="SUBMIT">
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="recipe-details">
+                <button type="button" class="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="recipe-details-content"></div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <!-- BACK TO TOP -->
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../static/recipe.js"></script>
+    <script src="https://kit.fontawesome.com/ef32f3a1d1.js" crossorigin="anonymous"></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="no-scrollbar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodGo - Food Website</title>
+    <meta name="title" content="FoodGo - Food Website">
+    <meta name="description" content="This is a food html website made by Sarvesh Chaurasia">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/svg+xml">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom css links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="../static/home.css">
+
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="./assets/images/hero-1.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-shape-1.png">
+    <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+
+</head>
+
+<body id="top">
+
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div id="logo">
+            <img src="../img/logo.png" alt="MyFoodWebsite">
+        </div>
+        <ul>
+            <li class="item"><a href="/home">Home</a></li>
+            <li class="item"><a href="#menu">Menu</a></li>
+            <li class="item"><a href="#reservation">Reservation</a></li>
+            <li class="item"><a href="/recipe">Recipes</a></li>
+            <li class="item"><a href="/contact">Contact Us</a></li>
+            <li class="item"><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <article>
+
+            <!-- HERO -->
+            <section class="hero" aria-label="home">
+                <div class="container">
+
+                    <div class="hero-content">
+                        <h1 class="h1 title hero-title">Welcome to FoodGo.</h1>
+
+                        <p class="section-text">
+                            The Best Place to Enjoy Your Meal.
+                        </p>
+
+                        <div class="wrapper">
+                            <img src="../img/down-arrow.png" alt="arrow" width="40" height="40" class="arrow">
+
+                            <a href="#" class="btn">
+                                <span class="span">Order Now</span>
+
+                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <figure class="hero-banner img-holder" style="--width: 632; --height: 606;">
+                        <img src="../img/hero-1.jpg" width="632" height="606" alt="hero-banner" class="img-cover">
+                    </figure>
+
+                    <img src="../img/hero-shape-1.png" width="490" height="455" alt="shape" class="shape shape-1">
+
+                </div>
+            </section>
+
+
+
+            <!-- POPULAR -->
+            <section class="section popular" aria-labelledby="popular-label">
+                <div class="container">
+
+                    <p class="section-subtitle text-center" id="popular-label">Our Popular Food</p>
+
+                    <h2 class="h2 title section-title text-center">Best Category Foods Menu</h2>
+
+                    <ul class="grid-list">
+
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-1.png" width="85" height="85" loading="lazy" alt="Pizza">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Pizza</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-2.png" width="85" height="85" loading="lazy" alt="Burger">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Burger</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-3.png" width="85" height="85" loading="lazy" alt="Bread">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Bread</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-4.png" width="85" height="85" loading="lazy" alt="Seafoods">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Seafoods</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-5.png" width="85" height="85" loading="lazy" alt="Coffee">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Coffee</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="popular-card">
+                                <figure class="card-icon">
+                                    <img src="../img/icon-6.png" width="85" height="85" loading="lazy" alt="Chicken">
+                                </figure>
+
+                                <h3 class="h3 title">
+                                    <a href="#" class="card-title">Chicken</a>
+                                </h3>
+
+                                <a href="#" class="card-btn" aria-label="View all products">
+                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+            <!-- MENU -->
+            <section class="section menu" aria-labelledby="menu-label" id="menu">
+                <div class="container">
+
+                    <p class="section-subtitle text-center" id="menu-label">Best Food Menu</p>
+
+                    <h2 class="h2 title section-title text-center">
+                        Choose Your Best Menus
+                    </h2>
+
+                    <div class="section-wrapper">
+                        <figure class="menu-banner img-holder" style="--width: 540; --height: 790;">
+                            <img src="../img/menu-banner.jpg" width="540" height="790" loading="lazy" alt="menu banner"
+                                class="img-cover">
+                        </figure>
+
+                        <ul class="grid-list">
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="../img/menu-1.png" width="150" height="150" loading="lazy"
+                                        alt="Hamburger">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="h3 title-wrapper title">
+                                        <h3>
+                                            <a href="#" class="item-title">Hamburger</a>
+                                        </h3>
+
+                                        <span class="separator"></span>
+
+                                        <span class="price">$25</span>
+                                    </div>
+
+                                    <p class="menu-text">
+                                        Roasted langousite, smoked patte.
+                                    </p>
+
+                                    <div class="rating-wrapper">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                        <p class="rating-text">(5k Reviews)</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="../img/menu-2.png" width="150" height="150" loading="lazy" alt="Pizza">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="h3 title-wrapper title">
+                                        <h3>
+                                            <a href="#" class="item-title">Pizza</a>
+                                        </h3>
+
+                                        <span class="separator"></span>
+
+                                        <span class="price">$63</span>
+                                    </div>
+
+                                    <p class="menu-text">
+                                        Filled of cheese, tomato, and toppings.
+                                    </p>
+
+                                    <div class="rating-wrapper">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                        <p class="rating-text">(5k Reviews)</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="../img/menu-3.png" width="150" height="150" loading="lazy"
+                                        alt="Baked Chicken Wings">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="h3 title-wrapper title">
+                                        <h3>
+                                            <a href="#" class="item-title">Baked Chicken Wings</a>
+                                        </h3>
+
+                                        <span class="separator"></span>
+
+                                        <span class="price">$199</span>
+                                    </div>
+
+                                    <p class="menu-text">
+                                        Roasted Chicken Wings with sauce.
+                                    </p>
+
+                                    <div class="rating-wrapper">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                        <p class="rating-text">(5k Reviews)</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <figure class="item-banner">
+                                    <img src="../img/menu-4.png" width="150" height="150" loading="lazy"
+                                        alt="Seafood Pizza">
+                                </figure>
+
+                                <div class="item-content">
+                                    <div class="h3 title-wrapper title">
+                                        <h3>
+                                            <a href="#" class="item-title">Seafood Pizza</a>
+                                        </h3>
+
+                                        <span class="separator"></span>
+
+                                        <span class="price">$352</span>
+                                    </div>
+
+                                    <p class="menu-text">
+                                        Pizza with seafood, cheese, and toppings.
+                                    </p>
+
+                                    <div class="rating-wrapper">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+
+                                        <p class="rating-text">(5k Reviews)</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+            <!-- SCHEDULE -->
+            <section class="section schedule" aria-labelledby="schedule-label">
+                <div class="container">
+
+                    <div class="schedule-content">
+                        <p class="section-subtitle" id="schedule-label">
+                            Working Hour
+                        </p>
+
+                        <h2 class="h2 title section-title">
+                            Enjoy Our Foods From 6 Days In a Week
+                        </h2>
+
+                        <ul class="schedule-list">
+                            <li class="schedule-item">
+                                <p class="h4 title">
+                                    Monday - Friday
+                                </p>
+
+                                <div class="separator"></div>
+
+                                <div class="time title">09am-6pm</div>
+
+                            </li>
+
+                            <li class="schedule-item">
+                                <p class="h4 title">
+                                    Saturday
+                                </p>
+
+                                <div class="separator"></div>
+
+                                <div class="time title">08am-7pm</div>
+
+                            </li>
+
+                            <li class="schedule-item">
+                                <p class="h4 title">
+                                    Sunday
+                                </p>
+
+                                <div class="separator"></div>
+
+                                <div class="time title">Closed</div>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="schedule-banner">
+                        <figure class="img-holder">
+                            <img src="../img/schedule-banner.jpg" alt="schedule-banner" class="img-cover">
+                        </figure>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <!-- RESERVATION -->
+            <section class="section reservation" aria-labelledby="reservation-label" id="reservation">
+                <div class="container">
+
+                    <div class="schedule-banner">
+                        <figure class="reservation-banner img-holder" style="--width: 630; --height: 730;">
+                            <img src="../img/reservation-banner.jpg" width="630" height="730" loading="lazy"
+                                alt="Reservation banner" class="img-cover">
+                        </figure>
+                    </div>
+
+                    <div class="reservation-content">
+                        <p class="section-subtitle" id="reservation-label">
+                            Booking Table
+                        </p>
+
+                        <h2 class="h2 title section-title">
+                            Make A Reservation
+                        </h2>
+
+                        <p class="section-text">
+                            Book a table for your family and friends to enjoy your meal.
+                        </p>
+
+                        <form action="/reservation" method="post" class="booking-form">
+                            <div class="input-wrapper">
+                                <input type="text" name="persons" class="input-field" placeholder="No. of Persons"
+                                    autocomplete="off" required>
+
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <input type="text" name="date" class="input-field" placeholder="Reservation Date"
+                                    autocomplete="off" required>
+
+                                <ion-icon name="calendar-outline"></ion-icon>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <input type="text" name="timing" class="input-field" placeholder="Reservation Timing"
+                                    autocomplete="off" required>
+
+                                <ion-icon name="time-outline"></ion-icon>
+                            </div>
+
+                            <button type="submit" class="btn">
+                                <span class="span">
+                                    Book A Table
+                                </span>
+
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <img src="../img/line-1.png" width="630" height="506" alt="shape" loading="lazy" class="shape">
+
+                </div>
+            </section>
+
+
+        </article>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="section footer-top">
+            <div class="container">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        <img src="../img/logo.png" width="130" loading="lazy" alt="Crispy Home">
+                    </a>
+
+                    <p class="footer-text">
+                        Thanks for visiting our website. Please subscribe us to get regular updates in our Menu and
+                        offers.
+                    </p>
+
+                    <form action="/subscription" method="post" class="footer-form">
+                        <input type="email" name="email" class="footer-input"
+                            placeholder="Enter Your Email for Subscription" autocomplete="off" required>
+
+                        <button type="submit" class="form-btn" aria-label="Subscribe">
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </button>
+                    </form>
+
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="title footer-list-title">Quick Links</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">About Company</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Home Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Our Menu (CMS)</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Shop (Ecom)</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Recipes</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="title footer-list-title">Products</p>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link2">Hamburger</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Chicken Burger</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Vegetable Pizza</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Chicken Roll</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Ice-Cream</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Potato</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Organic Juice</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Lemon Juice</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Mutton Tikka</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-link">Seafoods</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="list-subtitle">Call for Order:</p>
+
+                        <a href="000 (123) 456 89" class="title call">000 (123) 456 89</a>
+
+                        <a href="mail:to@crispy.com" class="email contact-text">hello@foodgo.com</a>
+
+                    </li>
+
+                    <li>
+                        <p class="list-subtitle">Location :</p>
+
+                        <address class="contact-text">
+                            Gandhinaagr, Gujarat, India
+                        </address>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright text-center">
+                    Copyright &copy; 2024 FoodGo | All Rights Reserved
+                </p>
+
+                <ul class="footer-bottom-list">
+
+                    <li>
+                        <a href="#" class="footer-bottom-link">
+                            Setting & Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-bottom-link">
+                            Faqs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-bottom-link">
+                            Food Menu
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+
+
+    <!-- Custom Js link -->
+    <script src="../static/script.js"></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
